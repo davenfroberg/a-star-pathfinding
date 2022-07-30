@@ -1,4 +1,4 @@
-# A* Pathfinding Algorithm
+# A* Pathfinding Algorithm Personal Project
 - Date: November 2020
 - Langauge: Java
 
