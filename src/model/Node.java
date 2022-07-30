@@ -6,7 +6,6 @@ public class Node {
     private int position;
     private boolean wall;
     private boolean target;
-    private boolean current;
     private int xPos, yPos;
     private boolean open;
     private boolean closed;
@@ -17,7 +16,6 @@ public class Node {
         this.position = position;
         this.wall = wall;
         this.target = target;
-        current = false;
         this.xPos = xPos;
         this.yPos = yPos;
         gCost = 0;
@@ -25,6 +23,7 @@ public class Node {
         open = false;
         closed = false;
         path = false;
+        parent = null;
     }
 
     public boolean isPath() {
@@ -63,32 +62,12 @@ public class Node {
         return xPos;
     }
 
-    public void setxPos(int xPos) {
-        this.xPos = xPos;
-    }
-
     public int getyPos() {
         return yPos;
     }
 
-    public void setyPos(int yPos) {
-        this.yPos = yPos;
-    }
-
     public boolean isTarget() {
         return target;
-    }
-
-    public void setTarget(boolean target) {
-        this.target = target;
-    }
-
-    public boolean isCurrent() {
-        return current;
-    }
-
-    public void setCurrent(boolean current) {
-        this.current = current;
     }
 
     public int getgCost() {
@@ -115,15 +94,7 @@ public class Node {
         return position;
     }
 
-    public void setPosition(int position) {
-        this.position = position;
-    }
-
     public boolean isWall() {
         return wall;
-    }
-
-    public void setWall(boolean wall) {
-        this.wall = wall;
     }
 }
